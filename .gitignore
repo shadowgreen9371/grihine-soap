@@ -1,0 +1,4 @@
+.DS_Store
+# Hostinger fallback-deploy credentials — never commit
+.deploy.env
+__pycache__/

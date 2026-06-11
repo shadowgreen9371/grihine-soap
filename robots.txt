@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+
+Sitemap: https://shadowgreen9371.github.io/grihine-soap/sitemap.xml

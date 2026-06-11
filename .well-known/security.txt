@@ -1,0 +1,5 @@
+# Grihine Soap — vulnerability disclosure
+Contact: mailto:grihinesoap@gmail.com
+Expires: 2027-06-11T00:00:00.000Z
+Preferred-Languages: en, ne, bn, hi
+Canonical: https://shadowgreen9371.github.io/grihine-soap/.well-known/security.txt
