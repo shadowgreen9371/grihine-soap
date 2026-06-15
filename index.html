@@ -4,58 +4,210 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Security: CSP (meta-level — GitHub Pages can't set HTTP headers), strict referrer -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Grihine Soap — Handcrafted Organic Soap from Kurseong, Darjeeling Hills</title>
-  <meta name="description" content="Grihine Soap — pure, handcrafted organic soaps made by the Kurseong Ambootia Women's Committee in the Darjeeling Hills. Grape cluster soap, rice water & rose, orange peel & honey, neem & titepati (Himalayan mugwort). Zero chemicals, women-made.">
-  <meta name="keywords" content="handmade soap, organic soap, Darjeeling, Kurseong, Ambootia, women made, natural soap, grape soap, neem soap, titepati soap, mugwort soap, rice water soap, gift box soap, wholesale soap India">
+  <title>Grihine Soap — Launching Soon | Handcrafted Organic Soap, Kurseong</title>
+  <meta name="description" content="Grihine Soap is putting the finishing touches on a brand-new website. Handcrafted organic soaps by the Kurseong Ambootia Women's Committee, Darjeeling Hills. Order now on WhatsApp — full store launching very soon.">
+  <meta name="keywords" content="handmade soap, organic soap, Darjeeling, Kurseong, Ambootia, Grihine soap, coming soon, launching soon">
   <meta name="author" content="Kurseong Ambootia Women's Committee">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Grihine Soap — Pure. Handcrafted. From the Hills of Kurseong.">
-  <meta property="og:description" content="Handcrafted organic soaps by the women of Ambootia Tea Estate, Darjeeling Hills. Zero chemicals. 100% women-made.">
+  <meta property="og:title" content="Grihine Soap — Launching Soon">
+  <meta property="og:description" content="Our hill artisans are hard at work on the new Grihine Soap store. Order on WhatsApp meanwhile — coming very soon!">
   <meta property="og:url" content="https://shadowgreen9371.github.io/grihine-soap/">
   <meta property="og:site_name" content="Grihine Soap">
   <meta property="og:locale" content="en_IN">
 
-  <!-- Favicon: green leaf -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
-
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Coming-soon / under-construction splash ===== */
+    .cs {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 40px 6% 0;
+      background: linear-gradient(180deg, #F4F1E8 0%, #E8E9DA 38%, #D5DEC2 70%, #C3D2AC 100%);
+    }
+    .cs::before { /* sun */
+      content: '';
+      position: absolute;
+      top: 8%; right: 13%;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,245,214,0.95) 0%, rgba(255,240,200,0.4) 55%, transparent 72%);
+    }
+    .cs-inner {
+      position: relative;
+      z-index: 3;
+      max-width: 640px;
+      width: 100%;
+      margin-bottom: 90px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.15s forwards;
+    }
+    .cs-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+    .cs-logo .leaf { font-size: 2.1rem; }
+    .cs-logo small {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--bark);
+    }
+    .cs-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bark);
+      background: rgba(240,237,230,0.75);
+      border: 1px solid rgba(122,90,42,0.3);
+      border-radius: 50px;
+      padding: 8px 20px;
+      margin: 18px 0 26px;
+    }
+    .cs-badge .dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--honey);
+      box-shadow: 0 0 0 0 rgba(217,164,65,0.6);
+      animation: pulse 1.8s ease infinite;
+    }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 0 0 rgba(217,164,65,0.5); }
+      50% { box-shadow: 0 0 0 9px rgba(217,164,65,0); }
+    }
+    .cs h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      font-weight: 800;
+      color: var(--forest);
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+    .cs h1 em { font-style: italic; color: var(--bark); }
+    .cs .lead {
+      font-size: clamp(1rem, 2.2vw, 1.18rem);
+      color: var(--soft-ink);
+      margin: 0 auto 18px;
+      max-width: 520px;
+    }
+
+    /* workers-at-work row */
+    .cs-workers {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 8px 0 22px;
+      font-size: 2rem;
+    }
+    .cs-workers span { display: inline-block; animation: bob 1.6s ease-in-out infinite; }
+    .cs-workers span:nth-child(2) { animation-delay: 0.2s; }
+    .cs-workers span:nth-child(3) { animation-delay: 0.4s; }
+    .cs-workers span:nth-child(4) { animation-delay: 0.6s; }
+    .cs-workers span:nth-child(5) { animation-delay: 0.8s; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-9px) rotate(3deg); } }
+
+    /* build progress bar (loops to show constant work) */
+    .cs-progress {
+      width: 100%;
+      max-width: 380px;
+      height: 12px;
+      margin: 6px auto 8px;
+      background: rgba(122,90,42,0.16);
+      border-radius: 50px;
+      overflow: hidden;
+    }
+    .cs-progress i {
+      display: block;
+      height: 100%;
+      width: 40%;
+      border-radius: 50px;
+      background: repeating-linear-gradient(45deg, var(--hill) 0 10px, var(--forest) 10px 20px);
+      animation: build 2.6s ease-in-out infinite;
+    }
+    @keyframes build {
+      0% { width: 8%; }
+      50% { width: 82%; }
+      100% { width: 8%; }
+    }
+    .cs-progress-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bark);
+      margin-bottom: 30px;
+    }
+
+    .cs-cta-label { font-size: 0.95rem; color: var(--soft-ink); margin-bottom: 14px; }
+    .cs-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .cs-ctas .btn { padding: 13px 26px; }
+    .cs-peek {
+      display: inline-block;
+      margin-top: 26px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--forest);
+      border-bottom: 2px solid var(--tea);
+      padding-bottom: 2px;
+    }
+    .cs-peek:hover { color: var(--bark); border-color: var(--bark); }
+
+    /* moving "always working" strip pinned to bottom */
+    .cs-strip {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 4;
+      background: var(--forest);
+      color: var(--mist);
+      overflow: hidden;
+      padding: 13px 0;
+    }
+    .cs-strip-track {
+      display: flex;
+      gap: 48px;
+      width: max-content;
+      animation: marquee 26s linear infinite;
+    }
+    .cs-strip-track span {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cs-inner, .cs-workers span, .cs-progress i, .cs-strip-track, .cs-badge .dot { animation: none; opacity: 1; }
+      .cs-progress i { width: 70%; }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- ======= NAVBAR ======= -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <span class="leaf">🌿</span>
-        <span>Grihine<small>Kurseong · Darjeeling Hills</small></span>
-      </a>
-
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">Our Story</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="cart-btn" id="cartBtn" aria-label="Cart" title="Your cart — checkout via WhatsApp">
-          🧺<span class="cart-count" id="cartCount">0</span>
-        </button>
-        <a href="contact.html" class="btn btn-solid order-cta">Order Now</a>
-        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ======= HERO ======= -->
-  <section class="hero" id="home">
+  <main class="cs">
+    <!-- layered hills (reuses site styles) -->
     <div class="hills" aria-hidden="true">
       <div class="hill hill-far-l"></div>
       <div class="hill hill-far-r"></div>
@@ -67,466 +219,45 @@
       <div class="mist-band mist-2"></div>
     </div>
 
-    <div class="hero-content">
-      <span class="hero-kicker">Kurseong Ambootia Women's Committee</span>
-      <h1>Grihine <em>Soap</em></h1>
-      <p class="tagline">Pure. Handcrafted. From the Hills of Kurseong.</p>
-      <div class="hero-ctas">
-        <a href="#products" class="btn btn-solid">Shop Now</a>
-        <a href="about.html" class="btn btn-outline">Our Story</a>
+    <div class="cs-inner">
+      <span class="cs-logo">
+        <span class="leaf">🌿</span>
+        <span>Grihine<small>Kurseong · Darjeeling Hills</small></span>
+      </span>
+
+      <div class="cs-badge"><span class="dot"></span> Under Construction</div>
+
+      <h1>We're crafting something <em>beautiful</em></h1>
+      <p class="lead">Our hill artisans &amp; workers are hard at work building the new Grihine Soap store — pouring the same care into this site as we do into every bar.</p>
+
+      <div class="cs-workers" aria-hidden="true">
+        <span>👷‍♀️</span><span>👩‍🌾</span><span>🛠️</span><span>🧼</span><span>🌿</span>
       </div>
-      <div class="hero-trust">
-        <span>100% Natural Ingredients</span>
-        <span>Handmade in Small Batches</span>
-        <span>Women-Led Committee</span>
+
+      <div class="cs-progress" role="progressbar" aria-label="Site build in progress"><i></i></div>
+      <p class="cs-progress-label">Workers constantly building &amp; updating…</p>
+
+      <p class="cs-cta-label">The full shop is launching very soon. Meanwhile, you can order directly:</p>
+      <div class="cs-ctas">
+        <!-- REPLACE 91XXXXXXXXXX with the real WhatsApp number -->
+        <a class="btn btn-whatsapp" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Grihine%20Soap!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+        <!-- REPLACE with real Instagram handle -->
+        <a class="btn btn-outline" href="https://instagram.com/grihinesoap" target="_blank" rel="noopener">📸 Instagram</a>
+        <!-- REPLACE with real email -->
+        <a class="btn btn-outline" href="mailto:grihinesoap@gmail.com">✉️ Email Us</a>
       </div>
+
+      <a class="cs-peek" href="home.html">Take a sneak peek at the collection →</a>
     </div>
 
-    <div class="badge-strip" aria-hidden="true">
-      <div class="badge-track">
-        <span>🌿 100% Organic</span><span>🧴 Zero Chemicals</span><span>👩 Women-Made</span>
-        <span>⛰️ Hill-Sourced</span><span>♻️ Eco Packaging</span><span>🤲 Handcrafted in Small Batches</span>
-        <span>🌿 100% Organic</span><span>🧴 Zero Chemicals</span><span>👩 Women-Made</span>
-        <span>⛰️ Hill-Sourced</span><span>♻️ Eco Packaging</span><span>🤲 Handcrafted in Small Batches</span>
+    <div class="cs-strip" aria-hidden="true">
+      <div class="cs-strip-track">
+        <span>🔨 Building the store</span><span>🌿 100% Organic</span><span>👩 Women-Made</span>
+        <span>⛰️ Hill-Sourced</span><span>🧼 Handcrafted Soap</span><span>🚧 Launching Soon</span>
+        <span>🔨 Building the store</span><span>🌿 100% Organic</span><span>👩 Women-Made</span>
+        <span>⛰️ Hill-Sourced</span><span>🧼 Handcrafted Soap</span><span>🚧 Launching Soon</span>
       </div>
     </div>
-  </section>
-
-  <!-- ======= PRODUCTS ======= -->
-  <section class="section" id="products">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Our Collection</span>
-        <h2>Soaps Born in the Mountains</h2>
-        <p>Every bar is poured, set and wrapped by hand at Ambootia Tea Estate — with ingredients grown in the Darjeeling Hills.</p>
-      </div>
-
-      <div class="product-grid">
-        <!-- Grape Cluster -->
-        <article class="product-card reveal">
-          <div class="soap-visual visual-grape">
-            <span class="product-tag">Signature</span>
-            <img class="soap-photo" src="images/grape-cluster.jpg" alt="Grape Cluster Soap hung on a jute rope" loading="lazy" width="871" height="1900">
-          </div>
-          <div class="product-body">
-            <h3>Grape Cluster Soap</h3>
-            <p class="benefit">A real cluster of deep purple soap berries on a jute rope. Antioxidant-rich, hangs beautifully by your sink — a design you won't find anywhere else.</p>
-            <div class="product-meta">
-              <span class="weight">On jute rope</span>
-              <span class="price">₹180</span>
-            </div>
-            <button class="btn btn-solid add-cart" data-name="Grape Cluster Soap" data-price="180">Add to Cart</button>
-          </div>
-        </article>
-
-        <!-- Rice Water & Rose -->
-        <article class="product-card reveal">
-          <div class="soap-visual visual-rice">
-            <span class="product-tag">Brightening</span>
-            <img class="soap-photo" src="images/rice-rose.jpg" alt="Rice Water & Rose Soap bar with box" loading="lazy" width="1425" height="1900">
-          </div>
-          <div class="product-body">
-            <h3>Rice Water &amp; Rose Soap</h3>
-            <p class="benefit">A white pearl bar inspired by Korean skincare rituals. Rice water gently brightens while rose softens and soothes the skin.</p>
-            <div class="product-meta">
-              <span class="weight">50 g</span>
-              <span class="price">₹120</span>
-            </div>
-            <button class="btn btn-solid add-cart" data-name="Rice Water & Rose Soap" data-price="120">Add to Cart</button>
-          </div>
-        </article>
-
-        <!-- Orange Peel & Honey -->
-        <article class="product-card reveal">
-          <div class="soap-visual visual-orange">
-            <span class="product-tag">Exfoliating</span>
-            <img class="soap-photo" src="images/orange-honey.jpg" alt="Orange Peel & Honey Soap bar with box" loading="lazy" width="1425" height="1900">
-          </div>
-          <div class="product-body">
-            <h3>Orange Peel &amp; Honey Soap</h3>
-            <p class="benefit">A warm golden bar with finely ground orange peel — a natural scrub that exfoliates, while hill honey locks in moisture.</p>
-            <div class="product-meta">
-              <span class="weight">50 g</span>
-              <span class="price">₹120</span>
-            </div>
-            <button class="btn btn-solid add-cart" data-name="Orange Peel & Honey Soap" data-price="120">Add to Cart</button>
-          </div>
-        </article>
-
-        <!-- Neem & Mugwort -->
-        <article class="product-card reveal">
-          <div class="soap-visual visual-neem">
-            <span class="product-tag">Anti-Acne</span>
-            <img class="soap-photo" src="images/neem-mugwort.jpg" alt="Neem & Titepati (mugwort) Soap dark bar with green box" loading="lazy" width="1425" height="1900">
-          </div>
-          <div class="product-body">
-            <h3>Neem &amp; Titepati Soap</h3>
-            <p class="benefit">A deep, dark herbal bar that purifies troubled skin. Neem fights acne naturally; <em>titepati</em> — the Himalayan mugwort that grows wild in our hills — calms and clarifies.</p>
-            <div class="product-meta">
-              <span class="weight">50 g</span>
-              <span class="price">₹120</span>
-            </div>
-            <button class="btn btn-solid add-cart" data-name="Neem & Titepati (Mugwort) Soap" data-price="120">Add to Cart</button>
-          </div>
-        </article>
-
-        <!-- Bulk / Wholesale -->
-        <article class="product-card reveal">
-          <div class="soap-visual visual-bulk">
-            <span class="product-tag">Wholesale</span>
-            <img class="soap-photo" src="images/batch.jpg" alt="A large batch of assorted handmade soaps" loading="lazy" width="1425" height="1900">
-          </div>
-          <div class="product-body">
-            <h3>Bulk &amp; Wholesale</h3>
-            <p class="benefit">20+ varieties for hotels, homestays, boutiques and resellers. Custom shapes, scents and branding available. Minimum 50 bars.</p>
-            <div class="product-meta">
-              <span class="weight">Min. 50 bars</span>
-              <span class="price">₹80–100<span style="font-size:0.8rem">/bar</span></span>
-            </div>
-            <a href="contact.html" class="btn btn-outline add-cart-link" style="text-align:center">Enquire Now</a>
-          </div>
-        </article>
-
-        <!-- Gift Box Sets -->
-        <article class="product-card reveal">
-          <div class="soap-visual visual-gift">
-            <span class="product-tag">Gifting</span>
-            <img class="soap-photo" src="images/gift-boxes.jpg" alt="Grape cluster soaps in kraft gift boxes with jute ribbon" loading="lazy" width="1900" height="1219">
-          </div>
-          <div class="product-body">
-            <h3>Gift Box Sets</h3>
-            <p class="benefit">Kraft boxes tied with jute ribbon and crinkle-paper nests. Duo and trio sets — a gift from the hills that feels personal.</p>
-            <div class="product-meta">
-              <span class="weight">Duo / Trio</span>
-              <span class="price">₹250–450</span>
-            </div>
-            <button class="btn btn-solid add-cart" data-name="Gift Box Set" data-price="250">Add to Cart</button>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= OUR STORY ======= -->
-  <section class="section story" id="story">
-    <div class="container story-grid">
-      <div class="story-text reveal">
-        <span class="eyebrow">Our Story</span>
-        <h2>Made by the Women of Ambootia</h2>
-        <p>High in the Darjeeling Hills, on the slopes of the Ambootia Tea Estate in Kurseong, a committee of local women came together with one idea — to turn the herbs, flowers and fruits growing around their homes into something the world would love.</p>
-        <p>Every Grihine bar is handcrafted in small batches: ingredients picked from hill gardens, blended over slow heat, poured into hand-carved moulds, and cured in clean mountain air. No factories. No chemicals. Just patient hands and pure intent.</p>
-        <p>When you buy a Grihine soap, you directly support the income, independence and craft of the women who made it.</p>
-
-        <div class="stats">
-          <div class="stat-box"><span class="num">100%</span><span class="label">Women-Made</span></div>
-          <div class="stat-box"><span class="num">20+</span><span class="label">Soap Varieties</span></div>
-          <div class="stat-box"><span class="num">0</span><span class="label">Harsh Chemicals</span></div>
-          <div class="stat-box"><span class="num">4,000 ft</span><span class="label">Above Sea Level</span></div>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <div class="batch-display" aria-label="A fresh batch of handmade soaps">
-          <h4>Fresh from this week's batch…</h4>
-          <img class="batch-photo" src="images/batch.jpg" alt="A large batch of freshly made Grihine soaps in many varieties" loading="lazy" width="1425" height="1900">
-          <p class="batch-note">Hand-poured, sun-cured, jute-wrapped — every single bar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= HOW IT'S MADE ======= -->
-  <section class="section process" id="process">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="peak-motif" aria-hidden="true">
-          <svg viewBox="0 0 100 56" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="78" cy="14" r="7" fill="#D4C4A0"/>
-            <path d="M0 56 L24 18 L40 40 L40 56 Z" fill="#8AAA6A"/>
-            <path d="M30 56 L56 8 L82 56 Z" fill="#3D6130"/>
-            <path d="M62 56 L84 22 L100 56 Z" fill="#2C4A1C"/>
-            <path d="M48 22 L56 8 L64 22 L58 20 L56 26 L54 20 Z" fill="#F0EDE6"/>
-          </svg>
-        </div>
-        <span class="eyebrow">How It's Made</span>
-        <h2>From Hill Garden to Your Hands</h2>
-        <p>No factory, no shortcuts — five slow, deliberate steps performed by hand in our Kurseong workshop.</p>
-      </div>
-
-      <div class="process-grid">
-        <figure class="process-figure reveal">
-          <span class="live-badge">Real footage · Our workshop</span>
-          <img src="images/process-curing.jpg" alt="Grape cluster soaps hanging on a rack to cure in the Grihine workshop" loading="lazy" width="1481" height="1900">
-          <figcaption>
-            <strong>Curing on the rack</strong>
-            Fresh grape-cluster soaps hang on jute ropes, drying slowly in clean mountain air before they're wrapped.
-          </figcaption>
-        </figure>
-
-        <div class="process-steps reveal">
-          <div class="process-step">
-            <div class="step-num"><span class="step-icon">🌿</span></div>
-            <div><h3>Gather from the hills</h3><p>Neem, mugwort, rose, orange peel and honey are collected fresh from Darjeeling-hill gardens and orchards.</p></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num"><span class="step-icon">🍯</span></div>
-            <div><h3>Blend over slow heat</h3><p>Oils and botanicals are melted and mixed by hand in small batches — measured by experience, not machines.</p></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num"><span class="step-icon">🫧</span></div>
-            <div><h3>Pour &amp; hand-mould</h3><p>Each bar is poured into hand-carved moulds; grape berries are rolled and strung onto jute one by one.</p></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num"><span class="step-icon">⛰️</span></div>
-            <div><h3>Cure in mountain air</h3><p>Soaps rest and dry for weeks at 4,000 ft — the slow cure that makes every bar long-lasting and gentle.</p></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num"><span class="step-icon">🎀</span></div>
-            <div><h3>Wrap with care</h3><p>Finished bars are boxed in kraft paper and tied with jute — zero plastic, ready to gift.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= INGREDIENTS ======= -->
-  <section class="section ingredients" id="ingredients">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">From the Hills</span>
-        <h2>Honest Ingredients, Nothing Else</h2>
-        <p>The hill heroes behind every Grihine bar — each chosen for what it does for your skin.</p>
-      </div>
-
-      <div class="ing-feature reveal">
-        <div class="ing-feature-art" aria-hidden="true">
-          <span class="leaf-mark">🌿</span>
-          <span class="local-name">तितेपाती · Titepati</span>
-        </div>
-        <div class="ing-feature-text">
-          <span class="eyebrow">Our Hero Hill Herb</span>
-          <h3>Titepati — Himalayan Mugwort</h3>
-          <p class="sub">The wild Darjeeling-hill herb behind the Korean "mugwort" skincare ritual.</p>
-          <p>Titepati (<em>Artemisia</em>) grows wild across the Kurseong hills — a bitter, fragrant herb our grandmothers have trusted for generations. It's the same plant the world now calls mugwort, and it gives our Neem &amp; Titepati bar its calming, clarifying power.</p>
-          <div class="ing-chips">
-            <span>Soothes acne-prone skin</span>
-            <span>Calms redness &amp; itching</span>
-            <span>Antibacterial</span>
-            <span>Antioxidant-rich</span>
-          </div>
-          <p class="footnote">Based on traditional Himalayan herbal use.</p>
-        </div>
-      </div>
-
-      <div class="ing-grid">
-        <div class="ing-card reveal"><span class="ing-icon">🍇</span><h4>Grape</h4><p>Antioxidant-rich, fights free radicals and dullness.</p></div>
-        <div class="ing-card reveal"><span class="ing-icon">🌹</span><h4>Rose</h4><p>Soothes, softens and lightly perfumes the skin.</p></div>
-        <div class="ing-card reveal"><span class="ing-icon">🍊</span><h4>Orange Peel</h4><p>Natural exfoliant, brightens and refreshes.</p></div>
-        <div class="ing-card reveal"><span class="ing-icon">🍯</span><h4>Honey</h4><p>Hill-harvested humectant that locks in moisture.</p></div>
-        <div class="ing-card reveal"><span class="ing-icon">🌿</span><h4>Neem</h4><p>Nature's purifier — antibacterial and anti-acne.</p></div>
-        <div class="ing-card reveal"><span class="ing-icon">🍚</span><h4>Rice Water</h4><p>Centuries-old brightening secret for even tone.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= WHY GRIHINE ======= -->
-  <section class="section why" id="why">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Why Grihine</span>
-        <h2>Soap with a Conscience</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-icon">🧪</div>
-          <h3>Zero Chemicals</h3>
-          <p>No parabens, no sulphates, no synthetic dyes. If we can't grow it or name it, it doesn't go in the pot.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon">👩‍🌾</div>
-          <h3>Women-Powered</h3>
-          <p>Founded and run entirely by the Kurseong Ambootia Women's Committee. Every purchase funds local livelihoods.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon">⛰️</div>
-          <h3>Hill-Sourced</h3>
-          <p>Herbs, fruits and honey come straight from Darjeeling-hill gardens — fresh, traceable, seasonal.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon">♻️</div>
-          <h3>Eco Packaging</h3>
-          <p>Kraft paper boxes, jute ribbon and zero plastic. Packaging that returns to the earth as gently as our soap.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon">✨</div>
-          <h3>Custom Orders</h3>
-          <p>Weddings, hotel amenities, corporate gifts — we craft custom shapes, scents and labels for your occasion.</p>
-        </div>
-        <div class="why-card reveal">
-          <div class="why-icon">🍇</div>
-          <h3>Unique Varieties</h3>
-          <p>From hanging grape clusters to herbal tea-leaf bars — designs and recipes you simply won't find in stores.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= GIFTING ======= -->
-  <section class="section gifting on-dark" id="gifting">
-    <div class="container gift-grid">
-      <div class="gift-visuals reveal" aria-hidden="true">
-        <span class="gift-box gift-sm"><span class="gift-bow"></span></span>
-        <span class="gift-box gift-lg"><span class="gift-bow"></span></span>
-        <span class="gift-box gift-sm"><span class="gift-bow"></span></span>
-      </div>
-      <div class="gift-text reveal">
-        <span class="eyebrow">Gifting</span>
-        <h2>A Gift from the Hills</h2>
-        <p>Our kraft gift boxes arrive nested in crinkle paper, tied with jute ribbon and a handwritten tag. Thoughtful, beautiful, and entirely earth-friendly — perfect for weddings, festivals and corporate gifting.</p>
-        <ul class="gift-options">
-          <li><span class="g-name">Duo Box</span><span class="g-desc">Any two 50g bars, kraft box + jute bow</span><span class="g-price">₹250</span></li>
-          <li><span class="g-name">Trio Box</span><span class="g-desc">Three bars of your choice, ribbon-tied</span><span class="g-price">₹350</span></li>
-          <li><span class="g-name">Signature Box</span><span class="g-desc">Grape cluster + two bars, premium wrap</span><span class="g-price">₹450</span></li>
-        </ul>
-        <a href="contact.html" class="btn btn-clay">Order a Gift Box</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= TESTIMONIALS ======= -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Kind Words</span>
-        <h2>Loved Across the Hills &amp; Beyond</h2>
-      </div>
-      <div class="testi-grid">
-        <div class="testi-card reveal">
-          <div class="stars">★★★★★</div>
-          <blockquote>The grape cluster soap is a piece of art — guests at my homestay always ask where it's from. Now I order 100 bars at a time.</blockquote>
-          <div class="testi-who">
-            <span class="testi-avatar">PS</span>
-            <div><span class="name">Priya Sharma</span><span class="place">Homestay Owner, Darjeeling</span></div>
-          </div>
-        </div>
-        <div class="testi-card reveal">
-          <div class="stars">★★★★★</div>
-          <blockquote>I switched my whole family to the neem &amp; mugwort bar. My son's acne calmed down within weeks — and no chemicals, which I love.</blockquote>
-          <div class="testi-who">
-            <span class="testi-avatar">AD</span>
-            <div><span class="name">Anjali Das</span><span class="place">Siliguri</span></div>
-          </div>
-        </div>
-        <div class="testi-card reveal">
-          <div class="stars">★★★★★</div>
-          <blockquote>Ordered trio gift boxes for Diwali — the kraft packaging and jute ribbon felt premium and personal. Knowing women in Kurseong made them makes it special.</blockquote>
-          <div class="testi-who">
-            <span class="testi-avatar">RM</span>
-            <div><span class="name">Rohan Mehta</span><span class="place">Kolkata</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= ORDER CHANNELS ======= -->
-  <section class="section channels on-dark" id="order">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Order Today</span>
-        <h2>Four Easy Ways to Order</h2>
-      </div>
-      <div class="channel-grid">
-        <!-- REPLACE: change 91XXXXXXXXXX to the real WhatsApp number -->
-        <a class="channel-card reveal" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Grihine%20Soap!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
-          <span class="ch-icon">💬</span>
-          <h3>WhatsApp</h3>
-          <p>Fastest way — message us your order and delivery address.</p>
-          <span class="ch-handle">+91-XXXXXXXXXX</span>
-        </a>
-        <!-- REPLACE: real Instagram handle -->
-        <a class="channel-card reveal" href="https://instagram.com/grihinesoap" target="_blank" rel="noopener">
-          <span class="ch-icon">📸</span>
-          <h3>Instagram</h3>
-          <p>See fresh batches and DM us to order.</p>
-          <span class="ch-handle">@grihinesoap</span>
-        </a>
-        <!-- REPLACE: real email -->
-        <a class="channel-card reveal" href="mailto:grihinesoap@gmail.com">
-          <span class="ch-icon">✉️</span>
-          <h3>Email</h3>
-          <p>For bulk, wholesale and corporate enquiries.</p>
-          <span class="ch-handle">grihinesoap@gmail.com</span>
-        </a>
-        <a class="channel-card reveal" href="products.html">
-          <span class="ch-icon">🛒</span>
-          <h3>Online Store</h3>
-          <p>Browse the full catalogue and build your cart.</p>
-          <span class="ch-handle">View Products →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= FOOTER ======= -->
-  <footer class="footer">
-    <div class="footer-range" aria-hidden="true">
-      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 70 L120 34 L260 56 L400 22 L560 50 L700 18 L860 48 L1020 26 L1180 52 L1320 30 L1440 50 L1440 70 Z" fill="#2A4A1C"/>
-        <path d="M0 70 L160 48 L320 64 L480 40 L640 60 L800 36 L980 62 L1140 44 L1300 64 L1440 46 L1440 70 Z" fill="#1E3312"/>
-      </svg>
-    </div>
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo">
-          <span class="leaf">🌿</span>
-          <span>Grihine<small>Kurseong · Darjeeling Hills</small></span>
-        </a>
-        <p>Pure. Handcrafted. From the Hills of Kurseong. Organic soaps made with love by the Kurseong Ambootia Women's Committee.</p>
-        <div class="social-links">
-          <!-- REPLACE: real social links -->
-          <a href="https://instagram.com/grihinesoap" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
-          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-          <a href="mailto:grihinesoap@gmail.com" aria-label="Email">✉️</a>
-        </div>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">Our Story</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Best Sellers</h4>
-        <ul>
-          <li><a href="products.html#grape">Grape Cluster Soap</a></li>
-          <li><a href="products.html#rice">Rice Water &amp; Rose</a></li>
-          <li><a href="products.html#orange">Orange Peel &amp; Honey</a></li>
-          <li><a href="products.html#gift">Gift Box Sets</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Find Us</h4>
-        <p>Ambootia Tea Estate,<br>Kurseong, Darjeeling Hills,<br>West Bengal — 734203, India</p>
-        <p><a href="mailto:grihinesoap@gmail.com">grihinesoap@gmail.com</a></p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        © 2026 Grihine Soap · Kurseong Ambootia Women's Committee · Made with <span class="heart">♥</span> in the Darjeeling Hills
-      </div>
-    </div>
-  </footer>
-
-  <!-- WhatsApp floating button — REPLACE 91XXXXXXXXXX with real number -->
-  <a class="wa-float" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Grihine%20Soap!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+  </main>
 </body>
 </html>
