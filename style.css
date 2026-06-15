@@ -1445,3 +1445,75 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--forest); line-heigh
   .hero-trust { gap: 6px 18px; }
   .footer-range { height: 44px; }
 }
+
+/* ---------- Titepati hero-ingredient highlight ---------- */
+.ing-feature {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(150deg, #fff, #F4F6EE);
+  border: 1px solid rgba(122, 90, 42, 0.16);
+  border-radius: 22px;
+  padding: 36px;
+  margin-bottom: 44px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.ing-feature-art {
+  position: relative;
+  min-height: 220px;
+  border-radius: 16px;
+  background: radial-gradient(circle at 50% 35%, #4d7a3c, var(--forest) 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.ing-feature-art::before,
+.ing-feature-art::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(240, 237, 230, 0.06);
+}
+.ing-feature-art::before { width: 240px; height: 240px; top: -70px; right: -60px; }
+.ing-feature-art::after { width: 160px; height: 160px; bottom: -50px; left: -40px; }
+.ing-feature-art .leaf-mark { font-size: 4.6rem; filter: drop-shadow(0 6px 14px rgba(0,0,0,0.3)); position: relative; z-index: 1; }
+.ing-feature-art .local-name {
+  position: absolute;
+  bottom: 16px;
+  z-index: 1;
+  font-family: var(--font-head);
+  font-style: italic;
+  color: var(--clay);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+.ing-feature-text .eyebrow { margin-bottom: 8px; }
+.ing-feature-text h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 6px; }
+.ing-feature-text .sub {
+  font-weight: 700;
+  color: var(--bark);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+.ing-feature-text p { color: var(--soft-ink); font-size: 0.98rem; margin-bottom: 18px; }
+.ing-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.ing-chips span {
+  background: var(--mist);
+  border: 1px solid rgba(61, 97, 48, 0.22);
+  color: var(--hill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 7px 14px;
+  border-radius: 50px;
+}
+.ing-chips span::before { content: '✓ '; color: var(--tea); }
+.ing-feature .footnote { font-size: 0.78rem; color: var(--bark); font-style: italic; margin-top: 14px; margin-bottom: 0; }
+
+@media (max-width: 760px) {
+  .ing-feature { grid-template-columns: 1fr; gap: 26px; padding: 26px; }
+  .ing-feature-art { min-height: 160px; }
+}
