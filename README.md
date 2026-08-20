@@ -3,7 +3,7 @@
 Pure. Handcrafted. From the Hills of Kurseong.
 
 The official website of **Grihine Soap** — handcrafted organic soaps made by the
-**Kurseong Ambootia Women's Committee**, Ambootia Tea Estate, Darjeeling Hills,
+**Shree Ganesh Self Help Group**, Ambootia Tea Estate, Darjeeling Hills,
 West Bengal, India.
 
 **Live site:** https://shadowgreen9371.github.io/grihine-soap/
